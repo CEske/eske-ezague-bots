@@ -1,0 +1,35 @@
+<!doctype html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+        
+
+        <script src="todo.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body ng-app="app" ng-controller="controller as spillerSearch">
+
+        <form ng-submit="spillerSearch.search()">
+            <input type="text" ng-model="spillerSearch.spillerId"  size="30"
+                   placeholder="Skriv ID" required>
+            <input class="btn-primary" type="submit" value="Søg">
+        </form>
+
+        <div class="card">
+            <img src="{{spiller.url}}" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>{{spiller.navn}}</b></h4> 
+                <div ng-repeat="spiller in data">
+                    <li ng-repeat="perm in spillerSearch.permissions">
+                        <label class="checkbox">
+                          <input type="checkbox" ng-model="perm.status">
+                          <span>{{perm.perm}}</span>
+                        </label>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <form ng-submit="spillerSearch.opdater()">
+            <input class="btn-primary" type="submit" value="Opdater spiller">
+        </form>
+    </body>
+</html>

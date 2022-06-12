@@ -1,0 +1,20 @@
+{
+    "fivem": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "pass": "",
+        "db": ""
+    },
+    "cryptic": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "pass": "",
+        "db": ""        
+    },
+    "donation": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "pass": "",
+        "db": ""
+    }
+}
